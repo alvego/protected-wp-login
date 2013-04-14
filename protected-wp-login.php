@@ -11,9 +11,9 @@ Author URI: http://www.themext.com/
 
 /* Translations Page */
 function protected_wp_login_translation_file() {
-  //if (is_admin()) {
+  if (is_admin()) {
     load_plugin_textdomain( 'protected-wp-login', false, dirname(plugin_basename( __FILE__ )). '/languages/');
-  //}
+  }
 }
 add_action('plugins_loaded', 'protected_wp_login_translation_file');
 
@@ -132,6 +132,6 @@ function protected_wp_login(){
         add_action( 'authenticate', 'protected_wp_login_check', 1000, 1 );
     }
 }
-add_action( 'login_init', 'protected-wp-login', 1000 );
+add_action( 'login_init', 'protected_wp_login', 1000 );
 
 ?>
