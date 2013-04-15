@@ -2,8 +2,8 @@
 /*
 Plugin Name: Protected wp-login
 Plugin URI: http://www.themext.com/protected-wp-login
-Description: This plugin protect your admin's login page (secure key in url).
-Author: alvego, infous
+Description: This plugin protects your admin's login page (secure key in url).
+Author: Alex Tim
 Version: 1.0
 Author URI: http://www.themext.com/
 */
