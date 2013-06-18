@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Protected wp-login v1.0\n"
+"Project-Id-Version: Protected wp-login v1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-04-14 23:32:49+0000\n"
+"PO-Revision-Date: 2013-06-18 22:29:40+0000\n"
 "Last-Translator: Alex Tim <alvego@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,34 +20,61 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: protected-wp-login.php:24
-#: protected-wp-login.php:74
+#: protected-wp-login.php:18
+#: protected-wp-login.php:94
 #@ protected-wp-login
 msgid "Protected wp-login options"
 msgstr "Настройки защищенного входа"
 
-#: protected-wp-login.php:25
+#: protected-wp-login.php:19
 #@ protected-wp-login
 msgid "Protected wp-login"
 msgstr "Защищенный вход"
 
-#: protected-wp-login.php:54
+#: protected-wp-login.php:73
 #@ protected-wp-login
 msgid "Use this link to login:"
 msgstr "Используйте для входа ссылку:"
 
-#: protected-wp-login.php:61
-#@ protected-wp-login
-msgid "Your secure key is empty. Plugin now disabled."
-msgstr "Ваш секретный ключ пуст. Плагин отключен."
-
-#: protected-wp-login.php:81
+#: protected-wp-login.php:50
 #@ protected-wp-login
 msgid "Your secure key:"
 msgstr "Ваш секретный ключ:"
 
-#: protected-wp-login.php:85
+#: protected-wp-login.php:34
+#: protected-wp-login.php:175
+#@ default
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: protected-wp-login.php:56
 #@ protected-wp-login
-msgid "Tip: Leave blank to disable plugin."
-msgstr "Совет: Оставьте пустым для отключения плагина."
+msgid "Totally hide wp-login.php, if `sk` param not defined in GET"
+msgstr "Полностью скрыть wp-login.php, если `sk` параметр не определен в GET"
+
+#: protected-wp-login.php:73
+#: protected-wp-login.php:80
+#@ default
+msgid "Settings saved."
+msgstr ""
+
+#: protected-wp-login.php:80
+#@ protected-wp-login
+msgid "Protection disabled."
+msgstr "Защита отключена."
+
+#: protected-wp-login.php:132
+#@ default
+msgid "Save Changes"
+msgstr ""
+
+#: protected-wp-login.php:45
+#@ protected-wp-login
+msgid "Enable protection:"
+msgstr "Включить защиту:"
+
+#: protected-wp-login.php:55
+#@ protected-wp-login
+msgid "Enable stealth mode:"
+msgstr "Включить режим невидимости:"
 
