@@ -24,8 +24,6 @@ For example: http://example.com/wp-login.php?sk=my_secure_key
 
 Warning: Be careful if `sk` parameter is not specified, the login will not be possible, even if specifying the correct username and password.
 
-When logging in, without specifying the correct security key, the current php process freezes for a few seconds, which also complicates the brute-force and reduces the load on your server in case of attack.
-
 == Installation ==
 
 1. Upload `protected-wp-login` folder to the `/wp-content/plugins/` directory
