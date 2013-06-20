@@ -42,6 +42,9 @@ An answer to that question.
 2. 
 
 == Changelog ==
+= 2.1 =
+* Avoiding the use of anonymous functions to support php versions below 5.3 
+
 = 2.0 =
 * Add stealth mode option (totally hide login form)
 * sleep() has been removed (high cpu loading reason)

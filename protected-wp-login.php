@@ -4,7 +4,7 @@ Plugin Name: Protected wp-login
 Plugin URI: http://www.themext.com/protected-wp-login
 Description: This plugin protects your admin's login page (secure key in url).
 Author: Alex Tim
-Version: 2.0
+Version: 2.1
 Author URI: http://www.themext.com/
 */
 if ( is_admin() ) {
@@ -34,14 +34,17 @@ if ( is_admin() ) {
           die( __( 'Cheatin&#8217; uh?' ) );
       }
       
+      function protected_wp_login_secure_key_state(){ 
+        return ( false === get_option('protected_wp_login_secure_key_enable') ) 
+            ? ( '' === get_option('protected_wp_login_secure_key') ? '0' : '1' ) 
+            : '1'; // for backward compatibility (v1.0)
+      }
       
       /* Declare options */
       $protected_wp_login_options = array(
         'protected_wp_login_secure_key_enable' => array(
           'type' => 'checkbox',
-          'default' => function(){ 
-            return ( false === get_option('protected_wp_login_secure_key_enable') ) ? ( '' === get_option('protected_wp_login_secure_key') ? '0' : '1' ) : '1'; // for backward compatibility (v1.0)
-          } ,
+          'default' =>  'protected_wp_login_secure_key_state',
           'title' => __( 'Enable protection:', 'protected-wp-login' )
         ),
         'protected_wp_login_secure_key' => array(
@@ -101,8 +104,8 @@ if ( is_admin() ) {
                         $val = get_option($option_name);
                         if ( false ===$val ) {
                           $val = $option_info['default'];
-                          if ( is_callable($val) ) {
-                            $val = $val();
+                          if ( function_exists($val) ) {
+                            $val = call_user_func($val);
                           }
                         }
                       ?>
